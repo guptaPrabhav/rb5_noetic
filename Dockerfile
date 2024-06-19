@@ -18,8 +18,9 @@ RUN apt-get update \
 bash-completion \
 python3-argcomplete \
 python3-pip \
+tmux \
 && echo $USERNAME ALL=\(rooot\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
-&& chmod 0440 /etc/sudoers.d/$USERNAME\
+&& chmod 0440 /etc/sudoers.d/$USERNAME \
 && rm -rf /var/lib/apt/lists/*
 
 RUN pip install ultralytics
