@@ -23,6 +23,10 @@ tmux \
 && chmod 0440 /etc/sudoers.d/$USERNAME \
 && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update \
+&& apt-get install -y ros-noetic-rtabmap-ros \
+&& rm -rf /var/lib/apt/lists/*
+
 RUN pip install ultralytics
 
 RUN pip install -U numpy
